@@ -27,7 +27,12 @@ TEST(PiezasTest, drop_initial)
 	ASSERT_EQ(test.dropPiece(0), X);
 }
 
-\
+TEST(PiezasTest, drop_next)
+{
+	Piezas test;
+	ASSERT_EQ(test.dropPiece(0), O);
+}
+
 /*
 Test(PiezasTest, makeColumnfull)
 {
