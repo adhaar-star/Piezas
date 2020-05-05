@@ -18,13 +18,13 @@ TEST(PiezasTest, sanityCheck)
 {
 	ASSERT_TRUE(true);
 }
-/*
+
 Test(PiezasTest, dropInitial)
 {
 	Piezas unit_test;
 	ASSERT_EQ(unit_test.dropPiece(0), X);
 }
-
+/*
 Test(PiezasTest, dropNext)
 {
 	Piezas unit_test;
