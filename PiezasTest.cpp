@@ -21,7 +21,7 @@ TEST(PiezasTest, sanityCheck)
 
 Test(PiezasTest, dropInitial)
 {
-	Piezas unit_test;
+	Piezas test;
 	ASSERT_EQ(unit_test.dropPiece(0), X);
 }
 /*
