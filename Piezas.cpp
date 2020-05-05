@@ -20,8 +20,19 @@
  * Constructor sets an empty board (default 3 rows, 4 columns) and 
  * specifies it is X's turn first
 **/
+using namespace std;
+
 Piezas::Piezas()
 {
+ 
+    turn = X;
+    board.resize(BOARD_ROWS);
+
+
+    for(int i=0; i<board.size();i++){
+       board[i].resize(BOARD_COLS);
+    }
+    reset();
 }
 
 /**
@@ -30,6 +41,12 @@ Piezas::Piezas()
 **/
 void Piezas::reset()
 {
+     for(int i=0; i<board.size();i++){
+         for(int j=0; j<board[i].size();j++){
+
+board[i][j] = Blank;
+         }
+     }
 }
 
 /**
@@ -42,6 +59,37 @@ void Piezas::reset()
 **/ 
 Piece Piezas::dropPiece(int column)
 {
+    if(column>=BOARD_COLS){
+          if(turn==X){
+        turn = O;
+    }
+    else{
+        turn = X;
+    }
+    return Invalid;
+    }
+   
+  
+for(int i=0;i<board.size();i++){
+  if(board[i][column]==Blank){
+       board[i][column] = turn;
+        if(turn==X){
+        turn = O;
+    }
+    else{
+        turn = X;
+    }
+    return board[i][column];
+  }
+        
+   }
+     
+     if(turn==X){
+        turn = O;
+    }
+    else{
+        turn = X;
+    }
     return Blank;
 }
 
@@ -51,7 +99,10 @@ Piece Piezas::dropPiece(int column)
 **/
 Piece Piezas::pieceAt(int row, int column)
 {
-    return Blank;
+    if(row>= BOARD_ROWS || column >= BOARD_COLS)
+    return Invalid;
+
+    return board[row][column];
 }
 
 /**
@@ -65,5 +116,86 @@ Piece Piezas::pieceAt(int row, int column)
 **/
 Piece Piezas::gameState()
 {
-    return Blank;
+  
+
+     int X_horizontal_count = 0;
+        int X_vertical_count = 0;
+      int O_horizontal_count = 0;
+        int O_vertical_count = 0;
+
+
+    for(int i=0; i<board.size();i++){
+         for(int j=0; j<board[i].size();j++){
+if(board[i][j] == Blank)
+return Invalid;
+
+         }
+
+    }
+// Horizontal X count
+     for(int i=0; i<board.size();i++){
+         bool check_all = true;
+         for(int j=0; j<board[i].size();j++){
+      if(board[i][j]==O)
+  check_all = false;
+         }
+         if(check_all==true)
+         X_horizontal_count++;
+     }
+
+     // Horizontal O count
+     for(int i=0; i<board.size();i++){
+         bool check_all = true;
+         for(int j=0; j<board[i].size();j++){
+      if(board[i][j]==X)
+  check_all = false;
+         }
+         if(check_all==true)
+         O_horizontal_count++;
+     }
+
+// Vertical X count
+     for(int j=0; j<BOARD_COLS;j++){
+           bool check_all = true;
+    for(int i=0; i<BOARD_ROWS;i++){
+        if(board[i][j]==O)
+  check_all = false;
+         }
+          if(check_all==true)
+         X_vertical_count++;
+    }
+
+     // Vertical O count
+     for(int j=0; j<BOARD_COLS;j++){
+           bool check_all = true;
+    for(int i=0; i<BOARD_ROWS;i++){
+        if(board[i][j]==X)
+  check_all = false;
+         }
+          if(check_all==true)
+         O_vertical_count++;
+    }
+
+//Getting winner 
+    if(X_horizontal_count<O_horizontal_count){
+        return O;
+    }
+    else if(O_horizontal_count<X_horizontal_count){
+        return X;
+    }
+    else {
+
+ if(X_vertical_count<O_vertical_count){
+        return O;
+    }
+    else if(O_vertical_count<X_vertical_count){
+        return X;
+    }
+    else{
+        return Blank;
+    }
+        
+    }
+
+    
 }
