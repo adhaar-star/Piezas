@@ -30,7 +30,6 @@ TEST(PiezasTest, drop_initial)
 TEST(PiezasTest, drop_next)
 {
 	Piezas unit_test;
-	unit_test.dropPiece(-1);
 	ASSERT_EQ(unit_test.dropPiece(0), O);
 }
 
