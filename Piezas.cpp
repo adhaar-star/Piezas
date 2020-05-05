@@ -29,7 +29,7 @@ Piezas::Piezas()
     board.resize(BOARD_ROWS);
 
 
-    for(int i=0; i<board.size();i++){
+    for(unsigned i=0; i<board.size();i++){
        board[i].resize(BOARD_COLS);
     }
     reset();

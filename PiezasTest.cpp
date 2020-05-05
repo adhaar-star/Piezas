@@ -23,14 +23,15 @@ TEST(PiezasTest, sanityCheck)
 
 TEST(PiezasTest, drop_initial)
 {
-	Piezas test;
-	ASSERT_EQ(test.dropPiece(0), X);
+	Piezas unit_test;
+	ASSERT_EQ(unit_test.dropPiece(0), X);
 }
 
 TEST(PiezasTest, drop_next)
 {
-	Piezas test;
-	ASSERT_EQ(test.dropPiece(0), O);
+	Piezas unit_test;
+	unit_test.dropPiece(-1);
+	ASSERT_EQ(unit_test.dropPiece(0), O);
 }
 
 /*
