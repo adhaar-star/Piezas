@@ -41,8 +41,8 @@ Piezas::Piezas()
 **/
 void Piezas::reset()
 {
-     for(int i=0; i<board.size();i++){
-         for(int j=0; j<board[i].size();j++){
+     for(unsigned i=0; i<board.size();i++){
+         for(unsigned j=0; j<board[i].size();j++){
 
 board[i][j] = Blank;
          }
@@ -70,7 +70,7 @@ Piece Piezas::dropPiece(int column)
     }
    
   
-for(int i=0;i<board.size();i++){
+for(unsigned i=0;i<board.size();i++){
   if(board[i][column]==Blank){
        board[i][column] = turn;
         if(turn==X){
@@ -124,8 +124,8 @@ Piece Piezas::gameState()
         int O_vertical_count = 0;
 
 
-    for(int i=0; i<board.size();i++){
-         for(int j=0; j<board[i].size();j++){
+    for(unsigned i=0; i<board.size();i++){
+         for(unsigned j=0; j<board[i].size();j++){
 if(board[i][j] == Blank)
 return Invalid;
 
@@ -133,9 +133,9 @@ return Invalid;
 
     }
 // Horizontal X count
-     for(int i=0; i<board.size();i++){
+     for(unsigned i=0; i<board.size();i++){
          bool check_all = true;
-         for(int j=0; j<board[i].size();j++){
+         for(unsigned j=0; j<board[i].size();j++){
       if(board[i][j]==O)
   check_all = false;
          }
@@ -144,9 +144,9 @@ return Invalid;
      }
 
      // Horizontal O count
-     for(int i=0; i<board.size();i++){
+     for(unsigned i=0; i<board.size();i++){
          bool check_all = true;
-         for(int j=0; j<board[i].size();j++){
+         for(unsigned j=0; j<board[i].size();j++){
       if(board[i][j]==X)
   check_all = false;
          }
@@ -155,9 +155,9 @@ return Invalid;
      }
 
 // Vertical X count
-     for(int j=0; j<BOARD_COLS;j++){
+     for(unsigned j=0; j<BOARD_COLS;j++){
            bool check_all = true;
-    for(int i=0; i<BOARD_ROWS;i++){
+    for(unsigned i=0; i<BOARD_ROWS;i++){
         if(board[i][j]==O)
   check_all = false;
          }
@@ -166,9 +166,9 @@ return Invalid;
     }
 
      // Vertical O count
-     for(int j=0; j<BOARD_COLS;j++){
+     for(unsigned j=0; j<BOARD_COLS;j++){
            bool check_all = true;
-    for(int i=0; i<BOARD_ROWS;i++){
+    for(unsigned i=0; i<BOARD_ROWS;i++){
         if(board[i][j]==X)
   check_all = false;
          }

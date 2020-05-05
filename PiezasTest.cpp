@@ -5,6 +5,8 @@
 #include <gtest/gtest.h>
 #include "Piezas.h"
  
+ using namespace std;
+
 class PiezasTest : public ::testing::Test
 {
 	protected:
@@ -19,17 +21,13 @@ TEST(PiezasTest, sanityCheck)
 	ASSERT_TRUE(true);
 }
 
-TEST(PiezasTest, drop_correct_peiceX)
+TEST(PiezasTest, drop_initial)
 {
 	Piezas test;
 	ASSERT_EQ(test.dropPiece(0), X);
 }
 
-Test(PiezasTest, drop_correct_peiceO)
-{
-	Piezas test;
-	ASSERT_EQ(test.dropPiece(0), O);
-}
+\
 /*
 Test(PiezasTest, makeColumnfull)
 {
