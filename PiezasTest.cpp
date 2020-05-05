@@ -25,7 +25,7 @@ TEST(PiezasTest, drop_correct_peiceX)
 	ASSERT_EQ(test.dropPiece(0), X);
 }
 
-Test(PiezasTest, drop_next)
+Test(PiezasTest, drop_correct_peiceO)
 {
 	Piezas test;
 	ASSERT_EQ(test.dropPiece(0), O);
