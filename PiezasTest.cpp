@@ -19,13 +19,13 @@ TEST(PiezasTest, sanityCheck)
 	ASSERT_TRUE(true);
 }
 
-Test(PiezasTest, dropInitial)
+Test(PiezasTest, drop_correct_peiceX)
 {
 	Piezas unit_test;
 	ASSERT_EQ(unit_test.dropPiece(0), X);
 }
 
-Test(PiezasTest, dropNext)
+Test(PiezasTest, drop_next)
 {
 	Piezas unit_test;
 	ASSERT_EQ(unit_test.dropPiece(0), O);
