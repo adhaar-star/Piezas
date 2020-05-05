@@ -19,18 +19,18 @@ TEST(PiezasTest, sanityCheck)
 	ASSERT_TRUE(true);
 }
 
-TEST(PiezasTest, dropInitial)
+TEST(PiezasTest, drop_correct_peiceX)
 {
 	Piezas test;
 	ASSERT_EQ(test.dropPiece(0), X);
 }
 
-Test(PiezasTest, dropNext)
+Test(PiezasTest, drop_next)
 {
 	Piezas test;
 	ASSERT_EQ(test.dropPiece(0), O);
 }
-
+/*
 Test(PiezasTest, makeColumnfull)
 {
 	Piezas test;
@@ -65,4 +65,4 @@ Test(PiezasTest, checkWinner){
 	 ASSERT_EQ(test.gameState(), X);
 	
 }
-
+*/
