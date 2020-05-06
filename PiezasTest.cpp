@@ -33,14 +33,14 @@ TEST(PiezasTest, drop_O)
 	unit_test.dropPiece(7);
 	ASSERT_EQ(unit_test.dropPiece(0), O);
 }
-/*
+
 
 Test(PiezasTest, make_column_full)
 {
 	Piezas test;
 	ASSERT_EQ(test.dropPiece(0), X);
 }
-
+/*
 Test(PiezasTest, BlankCheck)
 {
 	Piezas test;
