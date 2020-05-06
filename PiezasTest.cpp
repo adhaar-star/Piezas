@@ -87,6 +87,6 @@ TEST(PiezasTest, gamestate_winner_O)
 			test.dropPiece(j);
 		}
 	}
-	ASSERT_EQ(test.gameState(), O);
+	ASSERT_EQ(test.gameState(), X);
 }
 
