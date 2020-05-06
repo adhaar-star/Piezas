@@ -68,22 +68,23 @@ TEST(PiezasTest, piece_in_bounds)
 
 
 
-TEST(PiezasTest, gamestate_not_over)
+TEST(PiezasTest, game_not_over)
 {
-	Piezas test;
-	test.dropPiece(0);
-	ASSERT_EQ(test.gameState(), Invalid);
+	Piezas unit_test;
+	unit_test.dropPiece(0);
+	ASSERT_EQ(unit_test.gameState(), Invalid);
 }
-/*
+
 Test(PiezasTest, checkWinner){
 	Piezas test;
-	 for(int j=0; j<BOARD_ROWS;j++){
-    for(int i=0; i<BOARD_COLS;i++){
-		if(board[i][j] == Blank)
-        test.dropPiece(X);      
+	 
+    for(int i=BOARD_ROWS-1; i>0;i--){
+		for(int j=0; j<BOARD_ROWS;j++){
+        test.dropPiece(j);      
     }
-	 }
+	}
+	 
 	 ASSERT_EQ(test.gameState(), X);
 	
 }
-*/
+
