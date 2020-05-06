@@ -32,7 +32,7 @@ TEST(PiezasTest, drop_next)
 	Piezas unit_test;
 	ASSERT_EQ(unit_test.dropPiece(0), O);
 }
-
+/*
 
 Test(PiezasTest, make_column_full)
 {
