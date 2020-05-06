@@ -71,20 +71,20 @@ TEST(PiezasTest, piece_in_bounds)
 TEST(PiezasTest, game_not_over)
 {
 	Piezas unit_test;
-//	unit_test.dropPiece(0);
+	unit_test.dropPiece(0);
 	ASSERT_EQ(unit_test.gameState(), Invalid);
 }
 
-Test(PiezasTest, game_winner_X){
-	Piezas test;
+Test(PiezasTest, set_game_winner_X){
+	Piezas unit_test;
 	 
     for(int i=BOARD_ROWS-1; i>0;i--){
-		for(int j=0; j<BOARD_ROWS;j++){
-        test.dropPiece(j);      
+		for(int j=0; j<BOARD_COLS-1;j++){
+        unit_test.dropPiece(j);      
     }
 	}
 	 
-	 ASSERT_EQ(test.gameState(), X);
+	 ASSERT_EQ(unit_test.gameState(), X);
 	
 }
 
