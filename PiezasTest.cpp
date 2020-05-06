@@ -43,23 +43,15 @@ TEST(PiezasTest, drop_in_full_col)
 	unit_test.dropPiece(0);
 	ASSERT_EQ(unit_test.dropPiece(0), Blank);
 }
-Test(PiezasTest, drop_out_of_bonds)
+Test(PiezasTest, out_of_bounds_positive)
 {
 	Piezas test;
 	ASSERT_EQ(test.dropPiece(5), Invalid);
 }
 /*
-Test(PiezasTest, BlankCheck)
-{
-	Piezas test;
-	ASSERT_EQ(test.dropPiece(0), Blank);
-}
 
-Test(PiezasTest, dropOutofBonds)
-{
-	Piezas test;
-	ASSERT_EQ(test.dropPiece(5), Invalid);
-}
+
+
 
 Test(PiezasTest, GameNotOver){
 	Piezas test;
