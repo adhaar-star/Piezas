@@ -35,16 +35,13 @@ TEST(PiezasTest, drop_O)
 }
 
 
-Test(PiezasTest, drop_in_full_column)
+TEST(PiezasTest, drop_full_col)
 {
-	Piezas unit_test;
-	ASSERT_EQ(unit_test.dropPiece(0), X);
-	unit_test.dropPiece(8);
-	ASSERT_EQ(unit_test.dropPiece(0), X);
-	unit_test.dropPiece(9);
-		ASSERT_EQ(unit_test.dropPiece(0), X);
-		ASSERT_EQ(test.dropPiece(0), Blank);
-
+	Piezas test;
+	test.dropPiece(0);
+	test.dropPiece(0);
+	test.dropPiece(0);
+	ASSERT_EQ(test.dropPiece(0), Blank);
 }
 /*
 Test(PiezasTest, BlankCheck)
