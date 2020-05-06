@@ -46,13 +46,13 @@ TEST(PiezasTest, drop_in_full_col)
 TEST(PiezasTest, drop_out_of_bounds)
 {
 	Piezas test;
-	ASSERT_EQ(test.dropPiece(-1), Invalid);
+	ASSERT_EQ(test.dropPiece(5), Invalid);
 }
 
 TEST(PiezasTest, piece_at_out_of_bounds_row)
 {
 	Piezas test;
-	ASSERT_EQ(test.pieceAt(-1,0), Invalid);
+	ASSERT_EQ(test.pieceAt(6,0), Invalid);
 }
 /*
 
