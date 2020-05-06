@@ -51,13 +51,19 @@ TEST(PiezasTest, drop_out_of_bounds)
 
 
 
-TEST(PiezasTest, piece_at_out_of_bounds)
+TEST(PiezasTest, piece_out_of_bounds)
 {
 	Piezas unit_test;
 	ASSERT_EQ(unit_test.pieceAt(6,0), Invalid);
 }
 
 
+TEST(PiezasTest, piece_in_bounds)
+{
+	Piezas unit_test;
+	unit_test.dropPiece(0);
+	ASSERT_EQ(unit_test.pieceAt(0,0), X);
+}
 
 
 TEST(PiezasTest, game_not_over)
