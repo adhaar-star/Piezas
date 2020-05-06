@@ -59,7 +59,7 @@ TEST(PiezasTest, piece_in_out_of_bounds)
 {
 	Piezas unit_test;
 	unit_test.dropPiece(0);
-	ASSERT_EQ(unit_test.pieceAt(0,0), X);
+	ASSERT_EQ(unit_test.pieceAt(board.size()-1,0), X);
 }
 /*
 
