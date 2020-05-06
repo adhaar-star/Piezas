@@ -67,7 +67,7 @@ TEST(PiezasTest, piece_in_bounds)
 
 
 
-Test(PiezasTest, game_not_over){
+Test(PiezasTest, gamestate_not_over){
 	Piezas test;
 	ASSERT_EQ(test.gameState(), Invalid);
 }
