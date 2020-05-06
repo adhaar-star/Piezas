@@ -59,14 +59,10 @@ board[i][j] = Blank;
 **/ 
 Piece Piezas::dropPiece(int column)
 {
+    Piece return_value;
     if(column>=BOARD_COLS){
-          if(turn==X){
-        turn = O;
-    }
-    else{
-        turn = X;
-    }
-    return Invalid;
+         
+    return_value = Invalid;
     }
    
   
@@ -74,24 +70,20 @@ for(unsigned i=board.size()-1;i>0;i--){
   if(board[i][column]==Blank){
         
        board[i][column] = turn;
-      if(turn==X){
-        turn = O;
-    }
-    else{
-        turn = X;
-    }
-    return board[i][column];
+     
+    return_value =  board[i][column];
   }
         
    }
      
+     return_value = Blank;
      if(turn==X){
         turn = O;
     }
     else{
         turn = X;
     }
-    return Blank;
+    return return_value;
 }
 
 /**
