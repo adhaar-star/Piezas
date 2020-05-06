@@ -69,7 +69,7 @@ Piece Piezas::dropPiece(int column)
     }
    
   
-for(unsigned i=board.size()-1;i>=0;i--){
+for(unsigned i=BOARD_ROWS-1;i>0;i--){
   if(board[i][column]==Blank){
         
        board[i][column] = turn;
@@ -120,13 +120,13 @@ Piece Piezas::gameState()
         int O_vertical_count = 0;
 
 
-    for(unsigned i=0; i<board.size();i++){
-         for(unsigned j=0; j<board[i].size();j++){
-if(board[i][j] == Blank)
-return Invalid;
-
-         }
-
+    for( unsigned i = 0; i < BOARD_ROWS; i++ )
+    {
+        for( unsigned j = 0; j < BOARD_COLS; j++ )
+        {
+            if( board[i][j] == Blank)
+                return Invalid;
+        }
     }
 // Horizontal X count
      for(unsigned i=0; i<board.size();i++){
