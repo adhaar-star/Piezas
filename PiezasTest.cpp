@@ -54,6 +54,12 @@ TEST(PiezasTest, piece_at_out_of_bounds_row)
 	Piezas test;
 	ASSERT_EQ(test.pieceAt(6,0), Invalid);
 }
+
+TEST(PiezasTest, piece_in_out_of_bounds)
+{
+	Piezas test;
+	ASSERT_EQ(test.pieceAt(0,0), X);
+}
 /*
 
 
