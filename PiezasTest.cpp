@@ -75,10 +75,25 @@ TEST(PiezasTest, set_game_winner_O)
 	{
 		for( unsigned j = 0; j < BOARD_COLS; j++ )
 		{
-			test.dropPiece(-1);
+			test.dropPiece(5);
 			test.dropPiece(j);
 		}
 	}
 	ASSERT_EQ(test.gameState(), O);
+}
+
+TEST(PiezasTest, set_game_winner_X)
+{
+	Piezas test;
+
+	for( unsigned i = 0; i < BOARD_ROWS; i++ )
+	{
+		for( unsigned j = 0; j < BOARD_COLS; j++ )
+		{
+			test.dropPiece(j);
+			test.dropPiece(6);
+		}
+	}
+	ASSERT_EQ(test.gameState(), X);
 }
 
