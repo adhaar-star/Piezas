@@ -43,11 +43,12 @@ TEST(PiezasTest, drop_in_full_col)
 	unit_test.dropPiece(0);
 	ASSERT_EQ(unit_test.dropPiece(0), Blank);
 }
-Test(PiezasTest, out_of_bounds_positive)
+TEST(PiezasTest, drop_out_of_bounds)
 {
 	Piezas test;
-	ASSERT_EQ(test.dropPiece(5), Invalid);
+	ASSERT_EQ(test.dropPiece(-1), Invalid);
 }
+
 /*
 
 
