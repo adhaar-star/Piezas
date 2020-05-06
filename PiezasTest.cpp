@@ -37,8 +37,8 @@ TEST(PiezasTest, drop_O)
 
 Test(PiezasTest, make_column_full)
 {
-	Piezas test;
-	ASSERT_EQ(test.dropPiece(0), X);
+	Piezas unit_test;
+	ASSERT_EQ(unit_test.dropPiece(0), X);
 }
 /*
 Test(PiezasTest, BlankCheck)
