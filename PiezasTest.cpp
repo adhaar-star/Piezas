@@ -29,8 +29,8 @@ TEST(PiezasTest, drop_initial)
 
 TEST(PiezasTest, drop_next)
 {
-	Piezas unit_test;
-	ASSERT_EQ(unit_test.dropPiece(0), O);
+	//Piezas unit_test;
+	ASSERT_EQ(Piezas::dropPiece(0), O);
 }
 /*
 

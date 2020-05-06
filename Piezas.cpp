@@ -80,6 +80,7 @@ for(unsigned i=board.size()-1;i>=0;i--){
     else{
         turn = X;
     }
+    cout << 
     return board[i][column];
   }
         
