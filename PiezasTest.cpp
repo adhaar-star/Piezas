@@ -21,15 +21,16 @@ TEST(PiezasTest, sanityCheck)
 	ASSERT_TRUE(true);
 }
 
-TEST(PiezasTest, drop_initial)
+TEST(PiezasTest, drop_X)
 {
 	Piezas unit_test;
 	ASSERT_EQ(unit_test.dropPiece(0), X);
 }
 
-TEST(PiezasTest, drop_next)
+TEST(PiezasTest, drop_O)
 {
-	//Piezas unit_test;
+	Piezas unit_test;
+	unit_test.dropPiece(7);
 	ASSERT_EQ(Piezas::dropPiece(0), O);
 }
 /*
