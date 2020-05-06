@@ -35,7 +35,7 @@ TEST(PiezasTest, drop_O)
 }
 
 
-Test(PiezasTest, make_column_full_with_X)
+Test(PiezasTest, drop_in_full_column)
 {
 	Piezas unit_test;
 	ASSERT_EQ(unit_test.dropPiece(0), X);
@@ -43,6 +43,7 @@ Test(PiezasTest, make_column_full_with_X)
 	ASSERT_EQ(unit_test.dropPiece(0), X);
 	unit_test.dropPiece(9);
 		ASSERT_EQ(unit_test.dropPiece(0), X);
+		ASSERT_EQ(test.dropPiece(0), Blank);
 
 }
 /*
