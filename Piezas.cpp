@@ -63,7 +63,7 @@ Piece Piezas::dropPiece(int column)
     
       return_value = Blank; //default value
 
-    if(column>=BOARD_COLS){
+    if(column>=BOARD_COLS || column < 0 ){
          
     return_value = Invalid;
     }
@@ -75,6 +75,7 @@ for(unsigned i=BOARD_ROWS-1;i>0;i--){
        board[i][column] = turn;
      
     return_value =  board[i][column];
+    break;
   }
         
    }
