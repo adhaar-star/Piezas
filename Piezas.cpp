@@ -69,7 +69,7 @@ Piece Piezas::dropPiece(int column)
     }
    
   
-for(unsigned i=BOARD_ROWS-1;i>0;i--){
+for(unsigned i=0;i<BOARD_ROWS;i++){
   if(board[i][column]==Blank){
         
        board[i][column] = turn;

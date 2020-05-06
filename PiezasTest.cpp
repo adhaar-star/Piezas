@@ -75,7 +75,7 @@ TEST(PiezasTest, game_not_over)
 	ASSERT_EQ(unit_test.gameState(), Invalid);
 }
 
-TEST(PiezasTest, gamestate_winner_O)
+TEST(PiezasTest, set_game_winner_O)
 {
 	Piezas test;
 
