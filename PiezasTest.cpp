@@ -75,16 +75,18 @@ TEST(PiezasTest, game_not_over)
 	ASSERT_EQ(unit_test.gameState(), Invalid);
 }
 
-Test(PiezasTest, set_game_winner_X){
-	Piezas unit_test;
-	 
-    for(int i=BOARD_ROWS-1; i>0;i--){
-		for(int j=0; j<BOARD_COLS-1;j++){
-        unit_test.dropPiece(j);      
-    }
+TEST(PiezasTest, gamestate_winner_O)
+{
+	Piezas test;
+
+	for( unsigned i = 0; i < BOARD_ROWS; i++ )
+	{
+		for( unsigned j = 0; j < BOARD_COLS; j++ )
+		{
+			test.dropPiece(-1);
+			test.dropPiece(j);
+		}
 	}
-	 
-	 ASSERT_EQ(unit_test.gameState(), X);
-	
+	ASSERT_EQ(test.gameState(), O);
 }
 
