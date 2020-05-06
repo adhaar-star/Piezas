@@ -73,7 +73,7 @@ TEST(PiezasTest, game_not_over)
 	ASSERT_EQ(unit_test.gameState(), Invalid);
 }
 
-TEST(PiezasTest, set_game_winner_O)
+TEST(PiezasTest, set_game_winner_O_horizontally)
 {
 	Piezas test;
 
@@ -88,7 +88,7 @@ TEST(PiezasTest, set_game_winner_O)
 	ASSERT_EQ(test.gameState(), O);
 }
 
-TEST(PiezasTest, set_game_winner_X)
+TEST(PiezasTest, set_game_winner_X_horizontally)
 {
 	Piezas test;
 
@@ -132,6 +132,37 @@ TEST(PiezasTest, set_game_winner_X_vertically)
 			if(j==1){
 			test.dropPiece(j);
 			test.dropPiece(6);
+		}
+		
+	}
+	}
+
+	for( unsigned i = 0; i < BOARD_ROWS; i++ )
+	{
+		for( unsigned j = 0; j < BOARD_COLS; j++ )
+		{
+			if(j!=1){
+			test.dropPiece(j);
+			}
+		//	test.dropPiece(6);
+		}
+	}
+
+	ASSERT_EQ(test.gameState(), X);
+}
+
+
+TEST(PiezasTest, set_game_winner_O_vertically)
+{
+	Piezas test;
+
+	for( unsigned i = 0; i < BOARD_ROWS; i++ )
+	{
+		for( unsigned j = 0; j < BOARD_COLS; j++ )
+		{
+			if(j==1){
+			test.dropPiece(5);
+			test.dropPiece(j);
 		}
 		
 	}
