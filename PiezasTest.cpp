@@ -71,7 +71,7 @@ TEST(PiezasTest, piece_in_bounds)
 TEST(PiezasTest, game_not_over)
 {
 	Piezas unit_test;
-	unit_test.dropPiece(0);
+//	unit_test.dropPiece(0);
 	ASSERT_EQ(unit_test.gameState(), Invalid);
 }
 
