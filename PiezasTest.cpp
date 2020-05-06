@@ -67,9 +67,12 @@ TEST(PiezasTest, piece_in_bounds)
 
 
 
-Test(PiezasTest, game_not_over){
-	Piezas unit_test;
-	ASSERT_EQ(unit_test.gameState(), Invalid);
+
+TEST(PiezasTest, gamestate_not_over)
+{
+	Piezas test;
+	test.dropPiece(0);
+	ASSERT_EQ(test.gameState(), Invalid);
 }
 /*
 Test(PiezasTest, checkWinner){
