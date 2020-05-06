@@ -2,7 +2,6 @@
 
 [![Coverage Status](https://coveralls.io/repos/github/adhaar-star/Piezas/badge.svg?branch=master)](https://coveralls.io/github/adhaar-star/Piezas?branch=master)
 
-
 # Piezas
 
 ## Associated Enumerated Types
