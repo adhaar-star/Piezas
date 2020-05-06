@@ -45,20 +45,21 @@ TEST(PiezasTest, drop_in_full_col)
 }
 TEST(PiezasTest, drop_out_of_bounds)
 {
-	Piezas test;
-	ASSERT_EQ(test.dropPiece(5), Invalid);
+	Piezas unit_test;
+	ASSERT_EQ(unit_test.dropPiece(5), Invalid);
 }
 
 TEST(PiezasTest, piece_at_out_of_bounds_row)
 {
-	Piezas test;
-	ASSERT_EQ(test.pieceAt(6,0), Invalid);
+	Piezas unit_test;
+	ASSERT_EQ(unit_test.pieceAt(6,0), Invalid);
 }
 
 TEST(PiezasTest, piece_in_out_of_bounds)
 {
-	Piezas test;
-	ASSERT_EQ(test.pieceAt(0,0), X);
+	Piezas unit_test;
+	unit_test.dropPiece(0);
+	ASSERT_EQ(unit_test.pieceAt(0,0), X);
 }
 /*
 
