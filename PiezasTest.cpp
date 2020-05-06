@@ -57,14 +57,6 @@ TEST(PiezasTest, piece_at_out_of_bounds)
 	ASSERT_EQ(unit_test.pieceAt(6,0), Invalid);
 }
 
-TEST(PiezasTest, piece_in_bounds)
-{
-	Piezas unit_test;
-	unit_test.dropPiece(0);
-	ASSERT_EQ(unit_test.pieceAt(BOARD_ROWS-1,0), X);
-}
-
-
 
 
 
@@ -87,6 +79,6 @@ TEST(PiezasTest, set_game_winner_O)
 			test.dropPiece(j);
 		}
 	}
-	ASSERT_EQ(test.gameState(), Invalid);
+	ASSERT_EQ(test.gameState(), O);
 }
 
