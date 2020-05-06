@@ -35,10 +35,15 @@ TEST(PiezasTest, drop_O)
 }
 
 
-Test(PiezasTest, make_column_full)
+Test(PiezasTest, make_column_full_with_X)
 {
 	Piezas unit_test;
 	ASSERT_EQ(unit_test.dropPiece(0), X);
+	unit_test.dropPiece(8);
+	ASSERT_EQ(unit_test.dropPiece(0), X);
+	unit_test.dropPiece(9);
+		ASSERT_EQ(unit_test.dropPiece(0), X);
+
 }
 /*
 Test(PiezasTest, BlankCheck)
