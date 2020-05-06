@@ -60,6 +60,9 @@ board[i][j] = Blank;
 Piece Piezas::dropPiece(int column)
 {
     Piece return_value;
+    
+      return_value = Blank; //default value
+
     if(column>=BOARD_COLS){
          
     return_value = Invalid;
@@ -76,7 +79,7 @@ for(unsigned i=board.size()-1;i>0;i--){
         
    }
      
-     return_value = Blank;
+     
      if(turn==X){
         turn = O;
     }
