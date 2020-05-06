@@ -118,3 +118,35 @@ TEST(PiezasTest, set_game_winner_tie)
 	}
 	ASSERT_EQ(test.gameState(), Blank);
 }
+
+
+
+TEST(PiezasTest, set_game_winner_X_vertically)
+{
+	Piezas test;
+
+	for( unsigned i = 0; i < BOARD_ROWS; i++ )
+	{
+		for( unsigned j = 0; j < BOARD_COLS; j++ )
+		{
+			if(j==1){
+			test.dropPiece(j);
+			test.dropPiece(6);
+		}
+		
+	}
+	}
+
+	for( unsigned i = 0; i < BOARD_ROWS; i++ )
+	{
+		for( unsigned j = 0; j < BOARD_COLS; j++ )
+		{
+			if(j!=1){
+			test.dropPiece(j);
+			}
+		//	test.dropPiece(6);
+		}
+	}
+
+	ASSERT_EQ(test.gameState(), X);
+}
