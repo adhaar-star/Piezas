@@ -49,6 +49,11 @@ TEST(PiezasTest, drop_out_of_bounds)
 	ASSERT_EQ(test.dropPiece(-1), Invalid);
 }
 
+TEST(PiezasTest, peice_at_out_of_bounds_row)
+{
+	Piezas test;
+	ASSERT_EQ(test.pieceAt(-1,0), Invalid);
+}
 /*
 
 
