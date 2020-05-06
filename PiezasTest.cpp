@@ -75,7 +75,7 @@ TEST(PiezasTest, game_not_over)
 	ASSERT_EQ(unit_test.gameState(), Invalid);
 }
 
-Test(PiezasTest, checkWinner){
+Test(PiezasTest, game_winner_X){
 	Piezas test;
 	 
     for(int i=BOARD_ROWS-1; i>0;i--){
