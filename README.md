@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/adhaar-star/Piezas.svg?branch=master)](https://travis-ci.com/adhaar-star/Piezas) 
 
-https://s3.amazonaws.com/assets.coveralls.io/badges/coveralls_100.svg
+[![Coverage Status](https://coveralls.io/repos/github/adhaar-star/Piezas/badge.svg)](https://coveralls.io/github/adhaar-star/Piezas)
 
 # Piezas
 
