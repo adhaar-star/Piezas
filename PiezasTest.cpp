@@ -179,5 +179,5 @@ TEST(PiezasTest, set_game_winner_O_vertically)
 		}
 	}
 
-	ASSERT_EQ(test.gameState(), X);
+	ASSERT_EQ(test.gameState(), O);
 }
